@@ -1,0 +1,267 @@
+/* pages/water/water.wxss */
+
+page {
+  height: 100%;
+  background-color: #2b809d;
+}
+
+.water {
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+}
+
+/* 日期 */
+
+.water-picker {
+  display: flex;
+  align-items: center;
+  background-color: #247080;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  height: 70rpx;
+  padding: 0 30rpx;
+}
+
+.picker_grooup {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 26rpx;
+  display: flex;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.additems image {
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 搜索样式 */
+.searchTab {
+  background-color:#247080;
+  height: 72rpx;
+  padding: 5rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #fff;
+}
+.searchTab .search_arr {
+  border: 1px solid #fff;
+  border-radius: 20rpx;
+  flex: 1;
+  display: flex;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+}
+.search_arr .searchInput {
+  font-size: 26rpx;
+  color: #fff;
+  flex: 1;
+  padding-left: 30rpx;
+}
+.searchTab .sousuo {
+  height: 48rpx;
+  width: 80rpx;
+  margin-left: 50rpx;
+  border: 1px solid #fff;
+  border-radius: 14rpx;
+  line-height: 48rpx;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  background-color: rgba(48, 138, 221, 0.7);
+
+}
+
+
+/* 收入/支出 */
+.water-operation {
+   height: 100rpx;
+   display: flex;
+   background-color:#247080;
+   padding-left: 30rpx;
+   box-sizing: border-box;
+}
+.water-operation-cut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.water-operation-cut text{
+  font-size: 26rpx;
+  color: #fff;
+}
+.water-operation-cut image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.water-top {
+  height: 100rpx;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #247080; */
+}
+
+.water-top text {
+  font-size: 30rpx;
+  height: 60rpx;
+  padding: 0 60rpx;
+  border: 1px solid #fff;
+  background-color: rgba(138, 128, 128, 0.7);
+  border-radius: 8px;
+  margin: 0 30rpx;
+  color: #fff;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.water-top .switchover-style {
+  background-color: rgba(48, 138, 221, 0.7);
+}
+
+/* 中间数据 */
+
+.water-header {
+  background-color: #62b5c3;
+  border-bottom: 1px solid #bedadd;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.water-header view {
+  justify-content: center;
+  text-align: center;
+  width: 25%;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 80rpx;
+}
+
+.water-content {
+  flex: 1;
+  background-color: #2b809d;
+  overflow: auto;
+}
+
+.water-content .water-contert-commonality {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.water-content .water-contert-commonality view {
+  justify-content: center;
+  text-align: center;
+  width: 25%;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 80rpx;
+}
+
+.water-content .water-contert-from view {
+  border-bottom: 3px solid #62b5c3;
+  background-color: #bedadd;
+  color: black;
+}
+
+.water-content .water-contert-commonality .particularly-expend {
+  color: red;
+}
+
+.water-content .water-contert-commonality .particularly-income {
+  color: green;
+}
+
+.kind-list-item-hd-show {
+  opacity: 0.7;
+}
+
+/* 展示全部信息 */
+
+.unfoldParticulars {
+  padding: 0 60rpx;
+  padding-bottom: 22rpx;
+}
+
+.unfoldParticulars view {
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.unfoldParticulars view text {
+  margin: 0 20rpx;
+}
+
+.unfoldParticulars .showImg {
+  width: 180rpx;
+  height: 180rpx;
+}
+.unfoldParticulars .hiddenImg {
+  width: 0rpx;
+  height: 0rpx;
+}
+
+.unfoldParticulars-Allinformation {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.unfoldParticulars-Allinformation .Allinformation-buttom {
+  height: 80rpx;
+  width: 200rpx;
+  border-radius: 6px;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: green;
+}
+
+.haveData {
+  display: none;
+}
+
+.noneData {
+  height: 600rpx;
+  display: block;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 600rpx;
+  text-align: center;
+}
+
+/* 底部统计 */
+
+.water-bottom {
+  height: 80rpx;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 80rpx;
+  background-color: #3f5057;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.water-bottom text {
+  margin: 0 18rpx;
+}
+
+.modal_input {
+  border: 1px solid #2b809d;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  padding-left: 26rpx;
+  color: black;
+  margin-top: 20rpx;
+}

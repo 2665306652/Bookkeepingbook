@@ -1,0 +1,107 @@
+<!--pages/water/water.wxml-->
+<view class='water'>
+  <!-- 搜索样式 -->
+  <block wx:if="{{!focus}}">
+    <view class='water-picker'>
+      <view class='picker_grooup'>
+        <picker mode="date" value="{{date}}" end="{{date2}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{date}}
+          </view>
+
+        </picker>
+
+        <text style='margin:0 30rpx'>至</text>
+        <picker mode="date" value="{{date2}}" start="{{date}}" end="2020-09-15" bindchange="bindDateChange2">
+          <view class="picker">
+            {{date2}}
+          </view>
+        </picker>
+      </view>
+
+      <view class='additems'>
+        <image src='../../images/search.png' bindtap='searchData' style='margin-right:50rpx'></image>
+        <image src='../../images/addItems.png' bindtap='addUItems'></image>
+      </view>
+    </view>
+  </block>
+  <block wx:else="{{focus}}">
+    <!-- 搜索样式变化 -->
+    <view class='searchTab'>
+      <view class="search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="searchInput" type='text' placeholder-style='font-size:26rpx,color:#fff' placeholder="请输入搜索关键字" value="{{searchValue}}" maxlength="12" bindconfirm="bindconfirmsearch" focus="{{focus}}" confirm-type='search' bindinput='verification'></input>
+        <icon type="clear" size="20" bindtap='cancelValue' hidden='{{searchValue==""}}' />
+      </view>
+      <text class='sousuo' bindtap='cancelSearch'>取消</text>
+    </view>
+  </block>
+  <!-- 项目分类 -->
+  <view class='water-operation'>
+    <view class='water-operation-cut' bindtap='projectSwitcher'>
+      <image src='../../images/switcher.png'></image>
+      <text>切换项目</text>
+    </view>
+    <view class='water-top'>
+      <text class="{{switchoverType?'switchover-style':''}}" bindtap='expenditureWay'>支出</text>
+      <text class="{{switchoverType?'':'switchover-style'}}" bindtap='incomeWay'>收入</text>
+    </view>
+  </view>
+  <!-- 账单详情 -->
+  <view class='water-header'>
+    <view>类型</view>
+    <view>日期</view>
+    <view>金额</view>
+    <view>用途</view>
+  </view>
+  <scroll-view scroll-y class='water-content'>
+    <block>
+      <view wx:for="{{statistics}}" wx:key="{{id}}">
+        <view class='water-contert-commonality water-contert-from' id="{{item.id}}" bindtap="kindToggle">
+          <view class="{{switchoverType?'particularly-expend':'particularly-income'}}">{{item.nature==2?"收入":"支出"}}</view>
+          <!-- <view>{{switchoverType?'-':''}}{{item.money}}</view> -->
+           <view>{{item.fdate}}</view>
+          <view>{{switchoverType?'-':''}}{{item.money}}</view>
+          <view>{{item.names}}</view>
+        </view>
+
+        <!-- 展开信息 -->
+        <view hidden='{{stateType != item.id}}' class="unfoldParticulars">
+          <view>账单名称:
+            <text>{{item.title}}</text>
+          </view>
+          <view>记账时间:
+            <text>{{item.fdate}}</text>
+          </view>
+          <view>备注:
+            <text>{{item.remark}}</text>
+          </view>
+
+          <image wx:if="{{item.flowingimg}}" class="{{item.flowingimg==null?'hiddenImg':'showImg'}}" src="{{'http://192.168.3.213/financialcenter/web/'+ item.flowingimg}}"></image>
+          <view class="unfoldParticulars-Allinformation">
+            <view class='Allinformation-buttom' bindtap='allinformationModification' id="{{item.id}}">修改</view>
+            <view class='Allinformation-buttom' bindtap='allinformationDelete' id="{{item.id}}">删除</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="{{statistics.length<1?'noneData':'haveData'}}">
+        <view>您目前没有账单哦~{{time}}</view>
+      </view>
+    </block>
+
+  </scroll-view>
+  <!-- 账单统计 -->
+  <scroll-view scroll-x class='water-bottom'>
+    <text> 合计：</text>
+    <block wx:if="{{switchoverType}}">
+      <text style='color:red'>支出 : {{statistics.length}}次，共计 : {{moneyNumber}}RMB</text>
+    </block>
+    <block wx:else="{{!switchoverType}}">
+      <text style='color:red'>收入 : {{statistics.length}}次，共计 : {{moneyNumber}}RMB</text>
+    </block>
+  </scroll-view>
+
+  <!-- 自定义底部导航 -->
+  <bottomNav checkedIndex="1"></bottomNav>
+</view>

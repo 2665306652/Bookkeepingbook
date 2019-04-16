@@ -1,0 +1,6 @@
+<!--logs.wxml-->
+<view class="container log-list">
+   <button bindtap='uploadPicture'>点击上传照片</button>
+   <image src='{{src}}' mode="aspecFill"></image>
+   <!-- <button bindtap='uploadPicture'>确认</button> -->
+</view>

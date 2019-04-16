@@ -1,0 +1,131 @@
+/* pages/trueIndex/trueIndex.wxss */
+
+page {
+  background-color: #2b809d;
+  height: 100%;
+}
+/* 个人中心 */
+.project {
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+/* 用户信息 */
+.userinfo {
+  box-sizing: border-box;
+  height: 168rpx;
+  padding: 20rpx 50rpx;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background-color: #5599b0;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.userinfo-nickname {
+  display: inline-block;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 128rpx;
+  vertical-align: top;
+  margin-left: 50rpx;
+}
+
+/* 项目头部 */
+.projectTitle {
+  height: 100rpx;
+  background-color: #62b5c3;
+  font-size: 30rpx;
+  padding: 0 30rpx;
+  color: #fff;
+  line-height: 100rpx;
+}
+
+/* 项目内容 */
+.projectObject {
+  flex: 1;
+  overflow: auto;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+.projectObject .nullDataText {
+  height: 300rpx;
+  line-height: 300rpx;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  display: block;
+}
+.projectList .projectObject-name {
+  border-top: 3px solid #62b5c3;
+  background-color: #bedadd;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.projectObject-name text {
+  width: 80%;
+}
+
+.projectObject-name image {
+  height: 50rpx;
+  width: 50rpx;
+}
+/* 项目包含详情 */
+.projectDetails {
+  background-color: #ccc;
+}
+.projectDetails-show {
+  display: block;
+}
+.projectDetails-hide {
+  display: none;
+}
+.projectDetails .projectDetails-composition {
+   font-size: 30rpx;
+   line-height: 70rpx;
+   padding: 0 30rpx;
+   background-color: pink;
+   border-bottom: 1rpx solid #81aeb6;
+
+}
+.projectDetails button {
+  font-size: 30rpx;
+  text-align: left;
+  color: black;
+  border-radius: 0rpx;
+  border:0rpx;
+}
+.projectCompositionDetails {
+  padding: 0 60rpx;
+  font-size: 26rpx;
+   line-height: 60rpx;
+}
+/* 添加项目 */
+.addManageSort {
+  height: 90rpx;
+  display: flex;
+  padding: 0 30rpx;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b809d;
+}
+.addManageSort text {
+  color: #fff;
+  font-size: 26rpx;
+}
+.addManageSort image{
+  height: 60rpx;
+  width: 60rpx;
+}
+

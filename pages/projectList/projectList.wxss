@@ -1,0 +1,38 @@
+/* pages/projectList/projectList.wxss */
+
+page {
+  background-color: #2b809d;
+}
+.projectList {
+  padding-top: 40rpx;
+}
+.projectListRow {
+  display: inline-block;
+  padding: 0 10rpx;
+  margin: 14rpx;
+}
+.item {
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 30rpx;
+  background: gray;
+  height: 60rpx;
+  display: block;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+  text-align: center;
+  min-width: 100rpx;
+}
+
+.itemchecked {
+  color: red;
+  font-size: 30rpx;
+  border-radius: 30rpx;
+  background: pink;
+  height: 60rpx;
+  display: block;
+   padding: 0 10rpx;
+  line-height: 60rpx;
+  text-align: center;
+  min-width: 100rpx;
+}

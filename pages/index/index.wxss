@@ -1,0 +1,199 @@
+/* pages/login/login.wxss */
+/**index.wxss**/
+page{
+  background-color:#2b809d;
+  height: 100%;
+}
+.container{
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.header{
+  height: 120rpx;
+  width: 100vw;
+  background-color: rgb(135, 178, 235);
+  overflow: hidden;
+  position: relative;
+  
+}
+.img{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: -20%;
+}
+.demo1{
+  transform: rotate(0deg) scale(1) translate(75%,0%); 
+  -webkit-transform: rotate(0deg) scale(1) translate(75%,0%); 
+}
+.section{
+  flex: 1;
+  /* background-color: pink; */
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+.returnSort {
+   line-height: 80rpx;
+   margin: 0 10rpx;
+   color: #ccc;
+   font-size: 26rpx;
+}
+.usermotto{
+  height: 80rpx;
+  border-radius: 50rpx;
+  width: 500rpx;
+  margin: 20rpx auto;
+  background-color: gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+
+
+}
+.usermotto_btn{
+  width: 200rpx;
+  height: 70rpx;
+  text-align: center;
+  color: #ccc;
+  line-height: 70rpx;
+}
+.shadowType {
+  color: #fff;
+}
+.usermotto_shadow{
+   background-color: rgba(48, 138, 221, 0.7);
+  border-radius: 30rpx;
+  width: 200rpx;
+  height: 70rpx;
+  position: absolute;
+  left: 6%;
+}
+.usermotto_shadows{
+   background-color: rgba(48, 138, 221, 0.7);
+  border-radius: 30rpx;
+  width: 200rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 6%;
+  color: #fff;
+  z-index: 99;
+}
+
+.section_money{
+  height: 100rpx;
+  width: 100vw;
+  /* display: flex; */
+}
+.list_title{
+  height: 90rpx;
+  padding-left: 10rpx;
+  display: flex;align-items: center;
+  border-bottom: 1px solid #fff;
+}
+.list_title>input{
+  font-size: 30rpx;
+  color: #fff;
+}
+.list{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 90rpx;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10rpx;
+ 
+}
+.list_box{
+  display: flex;
+  align-items: center;
+  margin-left: 5rpx;
+}
+.list>input{
+  color: #fff;
+  font-size: 30rpx;
+}
+.lists{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:90rpx;
+  border-bottom:1px solid #fff;
+}
+
+.lists_box{
+  display: flex;
+  height:90rpx;
+  align-items: center;
+}
+.lists input {
+  flex: 1;
+   height:90rpx;
+   color: #fff;
+   font-size: 30rpx;
+}
+.list_text_updata {
+    color: rgba(158, 154, 154, 0.918);
+    font-size: 28rpx;
+}
+.lists_text{
+  padding: 0rpx 20rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+.lists textarea{
+  flex: 1;
+  color: #fff;
+  font-size: 30rpx;
+}
+.obtain{
+  height: 100rpx;
+ line-height: 100rpx;
+ flex: 1;
+ position: relative;
+ color: #fff;
+ font-size: 30rpx;
+  
+}
+.category{
+  width:200rpx;
+height:60rpx;
+border:1px solid #fff;
+border-radius:50rpx;
+margin-right: 40rpx;
+/* top:29%; */
+font-size:30rpx;
+color:#fff;
+display:flex;
+align-items:center;
+text-align:center;
+
+}
+.category>text{
+  margin: 0 auto;
+}
+.list_text{
+ padding: 0 15rpx;
+ color: #fff;
+ font-size: 30rpx;
+  
+}
+.picker{
+  color: #fff;
+  font-size: 30rpx;
+}
+.photosize{
+  width: 65rpx;
+  height: 65rpx;
+  display: block;
+}
+.login-btn{
+width: 80%;
+}
+
+
+/* 确认 */
+.buttomBox {
+  height: 180rpx;
+}

@@ -1,0 +1,38 @@
+<!--pages/manageSort/manageSort.wxml-->
+<view class='manageSort'>
+  <!-- 头部 -->
+  <view class='header'>
+    <view class="usermotto">
+      <text class='usermotto_btn' bindtap='expenditure'>支出</text>
+      <text class='usermotto_btn' bindtap='income'>收入</text>
+      <view class='{{shadowType?"usermotto_shadow":"usermotto_shadows"}}'></view>
+    </view>
+  </view>
+  <!-- 排序 -->
+  <view class='manageSort-rank'>
+    <!-- <text>排序</text> -->
+  </view>
+  <!-- 数据渲染列表 -->
+  <view class='manageSortBox'>
+    <view class='manageSort-content' wx:for="{{array}}" wx:key="{{item.id}}" bindtap='manageSortoperation' id="{{item.id}}">
+      <view>{{item.names}}</view>
+      <view hidden='{{stateType!=item.id}}' class='operationIcon'>
+        <view style='background-color: green' bindtap='compileData' id="{{item.id}}">
+          <image src='../../images/compile.png'></image>
+        </view>
+        <view style='background-color: red' bindtap='deletData' id="{{item.id}}">
+          <image src='../../images/delete.png'></image>
+        </view>
+      </view>
+   </view>
+  </view>
+  
+  <!-- 增加数据 -->
+  <view class="addManageSort  {{isIphoneX?'bottomNav-X':''}}">
+    <image src='../../images/add.png' bindtap='addData'></image>
+  </view>
+
+  <modal hidden="{{hiddenmodalput}}" title="{{modleType?'新增类别':'修改类别'}}" confirm-text="确定" cancel-text="取消" bindcancel="cancelM" bindconfirm="confirmM">
+    <input class="modal_input" bindinput='verification' maxlength='10' placeholder="请输入类别" value='{{modleType?addValue:modificationvalue}}' type='text' />
+  </modal>
+</view>

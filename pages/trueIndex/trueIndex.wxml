@@ -1,0 +1,52 @@
+<!--pages/trueIndex/trueIndex.wxml-->
+<view class='project'>
+  <!-- 用户信息 -->
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatar}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <!-- 增加一个项目 -->
+  <view class='addManageSort' bindtap='addObject'>
+    <text>创建一个新的项目</text>
+    <image src='../../images/add.png'></image>
+  </view>
+
+  <!-- 参与的项目 -->
+  <view class='projectTitle'>我参与的项目：</view>
+
+  <!-- 参与项目详情 -->
+  <view class='projectObject'>
+    <block wx:if="{{listData}}">
+      <view wx:for="{{listData}}" wx:key="{{id}}" class='projectList'>
+        <view class='projectObject-name'>
+          <text bindtap='projectObject' id='{{item.id}}'> {{item.organizationname}}</text>
+          <image src='{{state==item.id?presentCheck:noneCheck}}' bindtap='switchPresent' data-id='{{item.id}}' data-name="{{item.organizationname}}"></image>
+        </view>
+        <!-- 项目包含详情 -->
+        <view class='projectDetails' hidden='{{objectType != item.id}}' id='{{item.id}}'>
+          <view class='projectDetails-crew'>
+            <view class='projectDetails-composition' catchtap='projectCrew'>项目人员</view>
+            <!-- 后台数据目前没有人员 -->
+            <!-- <view hidden='{{valueType}}' class='projectCompositionDetails'  wx:for="{{item.liststyle}}" wx:key="{{item.val}}"  val="{{item.val}}" >{{item.name}}</view> -->
+          </view>
+          <view class='projectDetails-composition' bindtap='projectWater' data-id='{{item.id}}' >项目账单流水</view>
+          <!-- <view class='projectDetails-composition' bindtap='projectJion'>邀请人加入</view> -->
+          <button open-type="share" plain="true">邀请人加入</button>
+          <view bindtap='amendProject' id='{{item.id}}' class='projectDetails-composition'>修改项目名称</view>
+          <view bindtap='quitProject' id='{{item.id}}' class='projectDetails-composition'>退出当前项目</view>
+        </view>
+      </view>
+    </block>
+
+    <block wx:else="{{!listData}}">
+      <text class='nullDataText'>暂时没有数据!!!</text>
+    </block>
+
+  </view>
+
+  <modal hidden="{{hiddenmodalput}}" title="修改项目名称" confirm-text="确定" cancel-text="取消" bindcancel="cancelM" bindconfirm="confirmM">
+    <input class="modal_input" bindinput='verification' maxlength='10' placeholder="请输入新的项目名称" value='{{addValue}}' />
+  </modal>
+
+  <bottomNav checkedIndex="2"></bottomNav>
+</view>

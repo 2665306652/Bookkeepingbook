@@ -1,0 +1,42 @@
+
+<view class="bottomNav {{isIphoneX?'bottomNav-X':''}}">
+  <block wx:if="{{checkedIndex == 0}}">
+    <view class="mian-item item-checked" target="" url="../../pages/index/index" hover-class="navigator-hover" open-type="reLaunch">
+      <image src='../../images/index.png'></image>
+      <text class="item-text">首页</text>
+    </view>
+  </block>
+  <block wx:else>
+    <navigator class="mian-item" target="" url="../../pages/index/index" hover-class="navigator-hover" open-type="reLaunch">
+      <image src='../../images/index1.png'></image>
+      <text class="item-text">首页</text>
+    </navigator>
+  </block>
+
+
+  <block wx:if="{{checkedIndex == 1}}">
+    <view class="mian-item {{checkedIndex == 1 ? 'item-checked' : ''}} " target="" url="" hover-class="navigator-hover" open-type="navigate">
+      <image src='../../images/water.png'></image>
+      <text class="item-text">账单流水</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="mian-item {{checkedIndex == 1 ? 'item-checked' : ''}}" bindtap='wantSell'>
+      <image src='../../images/water1.png'></image>
+      <text class="item-text">账单流水</text>
+    </view>
+  </block>
+
+  <block wx:if="{{checkedIndex == 2}}">
+    <view class="mian-item {{checkedIndex == 2 ? 'item-checked' : ''}} " target="" url="" hover-class="navigator-hover" open-type="reLaunch">
+      <image src='../../images/admin.png'></image>
+      <text class="item-text">个人中心</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="mian-item {{checkedIndex == 2 ? 'item-checked' : ''}} " bindtap='onSkipCenter'>
+      <image src='../../images/admin1.png'></image>
+      <text class="item-text">个人中心</text>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "bottomNav": "/component/bottomNav/bottomNav"
+  }
+}

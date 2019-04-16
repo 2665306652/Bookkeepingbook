@@ -1,0 +1,17 @@
+<!--pages/createProject/createProject.wxml-->
+<view class='createProject'>
+  <view class='createProjectTitle'>创建一个新的项目</view>
+
+  <view class='createProjectContent'>
+    <!-- 项目名称 -->
+    <view>
+      <text>项目名称：</text>
+      <input type="text" placeholder="最大输入长度为10个字符" maxlength="10" bindinput="organizationnameInput"></input>
+    </view>
+  </view>
+
+  <view class='determine'>
+    <button bindtap='determineCreate'>确认</button>
+    <view style='height:50rpx;' class="{{isIphoneX?'bottomNav-X':''}}"></view>
+  </view>
+</view>

@@ -1,0 +1,84 @@
+<!--pages/login/login.wxml-->
+
+<view class="container">
+
+  <view class='header'>
+    <view class="usermotto ">
+      <text class='usermotto_btn' bindtap='expenditure'>支出</text>
+      <text class='usermotto_btn' bindtap='income'>收入</text>
+      <view class='{{shadowType?"usermotto_shadow":"usermotto_shadows"}}'></view>
+      <image class="img" bindtap="projectList" src='../../images/switcher.png'></image>
+
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class='section'>
+    <!-- <view class='section_money'> -->
+    <view class='list_title'>
+      <text class='list_text'>账单名称</text>
+      <input placeholder="请输入账单名称" maxlength='15' type='text' value='{{titleNum}}' bindinput='titleNumChange' ></input>
+    </view>
+    <view class='list'>
+      <view class='list_box'>
+        <image class='photosize' src="../../images/money.png" />
+        <text class='list_text'>金额</text>
+      </view>
+
+      <input placeholder="请输入金额" type="digit" maxlength='8' value="{{moneyNum}}" bindinput='moneyNumChange'/>
+
+    </view>
+
+    <view class='list'>
+      <view class='list_box'>
+        <image class='photosize' src="../../images/category.png" />
+        <text class='list_text'>类别</text>
+      </view>
+        <!-- <view class='returnSort'>{{returnSort}}</view> -->
+      <picker class='obtain' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <text wx:if='{{pickerValue}}'>{{returnSort}}</text>
+        <text wx:else='{{pickerValue}}'>{{array[index]}}</text>
+      </picker>
+      <!-- <input placeholder="" auto-focus /> -->
+      <view class='category' bindtap='manageSort'>
+        <text>管理类别</text>
+      </view>
+    </view>
+    <view class='list'>
+      <view class='list_box'>
+        <image class='photosize' src="../../images/dataImg.png" />
+        <text class='list_text'>日期</text>
+      </view>
+
+      <picker mode="date" value="{{date}}" class='obtain' bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+
+    </view>
+    <view class='list' bindtap='chooseImage'>
+      <view class='list_box'>
+        <image class='photosize' src="../../images/explain.png" />
+        <text class='list_text'>图像</text>
+      </view>
+       <text hidden='{{updataImg!=""}}' class='list_text_updata'>点击上传图片(仅限上传一张图片)</text>
+      <image wx:if="{{updataImg}}" class='photosize' src="{{updataImg}}"></image>
+
+    </view>
+    <view class='lists'>
+      <view class='lists_box'>
+        <image class='photosize' src="../../images/remark.png" style='margin-top:-10rpx' />
+
+        <text class='lists_text'>备注</text>
+      </view>
+      <!-- <input placeholder="可输入备注" auto-focus /> -->
+      <input placeholder="仅限输入18个字符" maxlength='18' value="{{textarea}}" bindinput="textareaChange" ></input>
+    </view>
+    <!-- </view> -->
+  </view>
+
+  <view class='buttomBox'>
+    <button class='login-btn' type="primary" size="{{primarySize}}" bindtap='primary'>确定</button>
+  </view>
+  <bottomNav checkedIndex="0"></bottomNav>
+</view>

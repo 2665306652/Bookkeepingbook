@@ -1,0 +1,10 @@
+
+<view class="page-content">
+  <view class="projectList">
+    <view wx:for="{{projectList}}" wx:key="{{item.id}}" class='projectListRow'>
+      <text class="item {{checkedIndex == item.id ? 'itemchecked':''}}" bindtap='itemOne' data-id='{{item.id}}'>{{item.organizationname}}</text>
+    </view>
+  </view>
+
+
+</view>

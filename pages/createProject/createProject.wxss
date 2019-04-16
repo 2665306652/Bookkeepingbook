@@ -1,0 +1,51 @@
+/* pages/createProject/createProject.wxss */
+/* 创建项目页面 */
+page{
+  background-color:#2b809d;
+   height: 100%;
+}
+/* 如果是IphoneX,样式修改 */
+.bottomNav-X {
+   padding-bottom: 40rpx;
+}
+.createProject{
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.createProjectTitle {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #2b809d;
+}
+.createProjectContent {
+  color: #fff;
+  flex: 1;
+}
+.createProjectContent view {
+  border-top: 3px solid #62b5c3;
+  background-color: #bedadd;
+  height: 80rpx;
+  padding:0 30rpx;
+  display: flex;
+  align-items: center;
+}
+.createProjectContent text {
+  font-size: 30rpx;
+  line-height: 80rpx;
+  margin-right: 30rpx;
+}
+.createProjectContent input{
+  font-size: 28rpx;
+}
+.determine {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.determine button{
+  width: 100%;
+}

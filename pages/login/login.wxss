@@ -1,0 +1,78 @@
+/**index.wxss**/
+page{
+  background-color:#2b809d;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/* .section{
+  background: #62b5c3;
+} */
+.list{
+  width: 100vw;
+  height: 80rpx;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  background: #62b5c3;
+}
+.list_text{
+  color: #fff;
+  font-size: 30rpx;
+  padding: 0 10rpx;
+  
+}
+.list>input{
+  flex: 1;
+  font-size: 30rpx;
+}
+.login-btn{
+width: 80%;
+}
+.login-code {
+  margin-bottom: 70rpx;
+  background: #62b5c3;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between
+}
+.login-code input{
+  flex: 1;
+  height: 80rpx;
+  padding-left: -136rpx;
+  font-size: 30rpx;
+}
+.get-code {
+  height: 80rpx;
+  font-size: 32rpx;
+  color: #1ED29B;
+  /* color: red; */
+  text-align: center;
+  line-height: 80rpx;
+  z-index: 666;
+}
+.phone-placeholder{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}

@@ -1,0 +1,21 @@
+{
+  "pages": [
+       
+    "pages/index/index",
+    "pages/login/login",
+    "pages/trueIndex/trueIndex",
+    "pages/logs/logs",
+    "pages/water/water",
+    "pages/admin/admin",
+    "pages/manageSort/manageSort",
+    "pages/projectList/projectList",
+    "pages/createProject/createProject"
+  ],
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

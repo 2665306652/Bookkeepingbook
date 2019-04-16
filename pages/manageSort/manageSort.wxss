@@ -1,0 +1,117 @@
+/* pages/manageSort/manageSort.wxss */
+
+page {
+  height: 100%;
+  background-color: #2b809d;
+}
+.manageSort {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+/* 如果是IphoneX,样式修改 */
+.bottomNav-X {
+   padding-bottom: 40rpx;
+}
+/* 头部 */
+.header{
+  height: 120rpx;
+  background-color: #2b809d;
+}
+
+.usermotto{
+  height: 80rpx;
+  border-radius: 50rpx;
+  width: 500rpx;
+  margin: 20rpx auto;
+  background-color: gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.usermotto_btn{
+  width: 200rpx;
+  height: 70rpx;
+  text-align: center;
+  color: #ccc;
+  line-height: 70rpx;
+}
+.shadowType {
+  color: #fff;
+}
+.usermotto_shadow{
+  background-color: rgba(48, 138, 221, 0.7);
+  border-radius: 30rpx;
+  width: 200rpx;
+  height: 70rpx;
+  position: absolute;
+  left: 6%;
+}
+.usermotto_shadows{
+  background-color: rgba(48, 138, 221, 0.7);
+  border-radius: 30rpx;
+  width: 200rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 6%;
+  color: #fff;
+  z-index: 99;
+}
+
+/* 排序 */
+.manageSort-rank {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: right;
+  padding: 0 30rpx;
+}
+/* 主体 */
+.manageSortBox {
+   flex:1;
+   overflow: auto;
+}
+.manageSort-content {
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  border-top: 1px solid #ccc;
+  background-color: #62b5c3;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 26rpx;
+  padding-left:30rpx;
+}
+.manageSort-content .operationIcon view{
+  display: inline-block;
+  height: 80rpx;
+  width: 80rpx;
+}
+.manageSort-content .operationIcon image {
+  height: 36rpx;
+  width: 36rpx;
+  margin: 22rpx;
+}
+/* 添加类别 */
+.addManageSort {
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #62b5c3;
+}
+.addManageSort image{
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.addModal .modal_input{
+  border: 1px solid  #2b809d;
+  border-radius:8rpx; 
+  font-size: 26rpx;
+  padding-left: 26rpx;
+  color: black;
+  margin-top: 20rpx;
+}

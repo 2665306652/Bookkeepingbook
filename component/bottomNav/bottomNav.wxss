@@ -1,0 +1,35 @@
+
+.bottomNav {
+  height: 100rpx;
+  width: 100%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+}
+.bottomNav-X {
+  padding-bottom: 40rpx;
+}
+.bottomNav .mian-item {
+  flex: 1;
+  text-align: center;
+}
+.mian-item {
+  height: 100rpx;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.mian-item image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+.mian-item .item-text {
+  font-size: 26rpx;                      
+}
+
+
+.item-checked{
+    color:#247080;
+    /* color:#e64340; */
+}
